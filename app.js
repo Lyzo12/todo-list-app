@@ -143,7 +143,6 @@ function getTodos() {
 }
 
 function removeLocalTodos(todo) {
- 
   // check if do i already have thing in there?
   let todos;
   if (localStorage.getItem("todos") === null) {
@@ -154,5 +153,6 @@ function removeLocalTodos(todo) {
 
   const todoIndex = todo.children[0].innerText;
   todos.splice(todos.indexOf(todoIndex), 1);
-  localStorage.setItem("todos", JSON.stringify(todos)); //Save back to localStorage
+  //Save back to localStorage
+  localStorage.setItem("todos", JSON.stringify(todos));
 }
